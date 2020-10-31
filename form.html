@@ -1,0 +1,266 @@
+<head>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+  <link rel="stylesheet" type="text/css" href="form.css">
+	<!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+    <link rel="stylesheet" href="./resources/css/style.css" />
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<!-- jQuery easing plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="form.js"></script>
+<style type="text/css">
+  body{
+    background-color: #0e0e0e;
+  }
+</style>
+</head>
+
+
+<body>
+ 
+    <header>
+      <div class="logo">
+        <img src="./resources/img/logo.png" alt="" />
+        <p>COVID-19</p>
+      </div>
+      <nav>
+      <ul>
+
+        <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="form.html">Lets Test!</a>
+      </li>
+    <li class="nav-item">
+        <a class="nav-link" href="#">Symptoms</a>
+      </li>
+    <li class="nav-item">
+        <a class="nav-link" href="page1.html">Prevention</a>
+      </li>
+    <li class="nav-item">
+        <a class="nav-link" href="graph.html">Statistics</a>
+      </li>
+        </ul>
+      </nav>
+    </header>
+
+<!-- multistep form -->	
+<form id="msform" method="POST" action="redirect.php">
+	<!-- progressbar -->
+	<ul id="progressbar">
+		<li class="active"></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<!-- fieldsets -->
+	<fieldset>
+		<h2 class="fs-subtitle">Question 1</h2>
+		<h3 class="fs-title"><label style="margin-right: 20px">What is you age?</label></h3>
+    <!--<p class="help-block">List your strengths here.</p>-->
+    <input required type="number" class=" num" name="usrage" min="0" max="150" value="18">
+    <!-- <input required type="number" class="" name="CAT_Custom_1" id="CAT_Custom_1" min="0" max="150"> -->
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+
+
+	<fieldset>
+		<h2 class="fs-subtitle">Question 2</h2>
+		<h3 class="fs-title">What is your gender?</h3>
+
+<input type='radio' name='gender' value='male' checked id='q21'><label for="q21">Male</label>
+   <input type='radio' name='gender' value='female' id='q22'><label for="q22"> Female</label>
+   <input type='radio' name='gender' value='other' id='q23'><label for="q23"> Other</label>
+
+   <br>
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+
+
+	<fieldset>
+		<h2 class="fs-subtitle">Question 3</h2>
+		<h3 class="fs-title">Choose your approximate body temperature.</h3>
+
+		<input class="" type='radio' name='BodyTem' value='Normal' id="q31" checked><label for="q31">Normal (96 F-98.6 F))</label>
+  <br>
+   <input class="" type='radio' name='BodyTem' value='Fever' id="q32"><label for="q32" >Fever (98.6 F-102 F)</label>
+  <br>
+   <input class="" type='radio' name='BodyTem' value='High' id="q33"> <label for="q33" > High Fever (>102 F)</label>
+   <br>
+
+<!-- <textarea class="" name="CAT_Custom_3" id="CAT_Custom_3" rows="4" onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);"></textarea> -->
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+
+
+	<fieldset>
+		<h2 class="fs-subtitle">Question 4</h2>
+		<h3 class="fs-title">Are you experiencing any of the symptoms below? (mark all those applicable)</h3>
+		<div class="custom-control custom-switch">
+      <input type="checkbox" class="ab custom-control-input" name="q4[]" value="1" id="customSwitch1">
+      <label class="custom-control-label" for="customSwitch1">Dry Cough</label>
+    </div>
+
+
+    <div class="custom-control custom-switch">
+      <input type="checkbox" class="ab custom-control-input" name="q4[]" value="2" id="customSwitch2">
+      <label class="custom-control-label" for="customSwitch2">Sneezing</label>
+    </div>
+
+  <div class="custom-control custom-switch">
+      <input type="checkbox" class="ab custom-control-input" name="q4[]" value="3" id="customSwitch3">
+      <label class="custom-control-label" for="customSwitch3">Sore Throat</label>
+  </div>
+  <div class="custom-control custom-switch">
+      <input type="checkbox" class="ab custom-control-input" name="q4[]" value="4" id="customSwitch4">
+      <label class="custom-control-label" for="customSwitch4">Weakness</label>
+  </div>
+
+<!-- <textarea class="" name="CAT_Custom_4" id="CAT_Custom_4" rows="4" onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);"></textarea> -->
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+</fieldset>
+
+
+	<fieldset>
+		<h2 class="fs-subtitle">Question 5</h2>
+		<h3 class="fs-title">.Additionally, please verify if you are experiencing any of the symptoms below (mark all those applicable)</h3>
+
+		<div class="custom-control custom-switch">
+    <input type="checkbox" name="q5[]" value="1" class="cd custom-control-input" id='q41'>
+      <label class="custom-control-label" for='q41'>Moderate to Severe Cough</label>
+  </div>
+
+
+
+  <div class="custom-control custom-switch">
+    <input type="checkbox" name="q5[]" value="2" class="cd custom-control-input" id="q42">
+      <label class="custom-control-label" for="q42">Feeling Breathless</label>
+  </div>
+
+
+
+  <div class="custom-control custom-switch">
+      <input type="checkbox" name="q5[]" value="3" class="cd custom-control-input" id="q43">
+      <label class="custom-control-label" for="q43">Difficulty in Breathing</label>
+  </div>
+
+  <div class="custom-control custom-switch">
+      <input type="checkbox" name="q5[]" value="4" class="cd custom-control-input" id="q44">
+      <label class="custom-control-label" for="q44">Drowsiness Persistent Pain and Pressure in Chest</label>
+  </div>
+
+  <div class="custom-control custom-switch">
+      <input type="checkbox" name="q5[]" value="5" class="cd custom-control-input" id="q45">
+    <label class="custom-control-label" for="q45">Severe Weakness</label>
+  </div>
+
+
+<!-- <textarea class="" name="CAT_Custom_5" id="CAT_Custom_5" rows="4" onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);"></textarea> -->
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+
+
+
+	<fieldset>
+		<h2 class="fs-subtitle">Question 6</h2>
+		<h3 class="fs-title">Please select your travel and exposure details</h3>
+ <div class="custom-control custom-switch">
+      <input type="checkbox" name="q7[]" value="1" class="gh custom-control-input" id='q71'>
+    <label class="custom-control-label" for="q71">Diabetes</label>
+  </div>
+
+  <div class="custom-control custom-switch">
+    <input type="checkbox" name="q7[]" value="2" class="gh custom-control-input" id='q72'>
+    <label class="custom-control-label" for="q72">High Blood Pressure</label>
+  </div>
+
+  <div class="custom-control custom-switch">
+    <input type="checkbox" name="q7[]" value="3" class="gh custom-control-input" id='q73'>
+      <label class="custom-control-label" for="q73">Heart Disease</label>
+  </div>
+
+  <div class="custom-control custom-switch">
+    <input type="checkbox" name="q7[]" value="4" class="gh custom-control-input" id='q74'>
+      <label class="custom-control-label" for="q74">Kidney Disease </label>
+  </div>
+
+  <div class="custom-control custom-switch">
+    <input type="checkbox" name="q7[]" value="5" class="gh custom-control-input" id="q75">
+      <label class="custom-control-label" for="q75">Lung disease</label>
+  </div>
+
+  <div class="custom-control custom-switch">
+    <input type="checkbox" name="q7[]" value="6" class="gh custom-control-input" id='q76'>
+      <label class="custom-control-label" for="q76">Stroke</label>
+  </div>
+
+  <div class="custom-control custom-switch">
+    <input type="checkbox" name="q7[]" value="7" class="gh custom-control-input" id='q77'>
+      <label class="custom-control-label" for="q77">Reduced Immunity</label>
+  </div>
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+
+
+
+	<fieldset>
+		<h2 class="fs-subtitle">Question 7</h2>
+		<h3 class="fs-title">Please select your travel and exposure details</h3>
+<div class="custom-control custom-switch">
+      <input type="checkbox" name="q6[]" value="2" class="ef custom-control-input" id="q61">
+      <label class="custom-control-label" for="q61">History of travel or meeting in internationally in  last few days</label>
+  </div>
+
+  <div class="custom-control custom-switch">
+    <input type="checkbox" name="q6[]" value="3" class="ef custom-control-input" id="q62">
+      <label class="custom-control-label" for="q62">Close Contact with confirmed COVID in last 14 days</label>
+  </div>
+  		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+
+
+	<fieldset>
+		<h2 class="fs-subtitle">Question 8</h2>
+		<h3 class="fs-title">How have your symptoms progressed over the last 48 hrs?</h3>
+<input type="radio" name="q8" value="1" checked><label>No Change</label><br>
+  <label><input type="radio" name="q8" value="2" >Improved </label><br>
+  <label><input type="radio" name="q8" value="3" >Worsened</label><br>
+  <label><input type="radio" name="q8" value="4" >Worsened Considerably</label><br>
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="submit" class="action-button" value="Submit" />
+	</fieldset>
+
+
+	<!-- <fieldset>
+		<h2 class="fs-subtitle">Question 9</h2>
+		<h3 class="fs-title">What postgraduate qualifications do you hold?</h3>
+<textarea class="" name="CAT_Custom_9" id="CAT_Custom_9" rows="4" onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);"></textarea>
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="button" name="next" class="next action-button" value="Next" />
+	</fieldset>
+	<fieldset>
+		<h2 class="fs-subtitle">Question 10</h2>
+		<h3 class="fs-title">What postgraduate qualifications or training do you wish to obtain?</h3>
+<textarea class="" name="CAT_Custom_10" id="CAT_Custom_10" rows="4" onkeydown="if(this.value.length>=4000)this.value=this.value.substring(0,3999);"></textarea>
+		<input type="button" name="previous" class="previous action-button" value="Previous" />
+		<input type="submit" name="submit" class="submit action-button" value="Submit" />
+	</fieldset> -->
+</form>
+</body>
+<script type="text/javascript" src="form.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<!-- jQuery easing plugin -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" type="text/javascript"></script>
